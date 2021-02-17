@@ -1,0 +1,56 @@
+@import "./partials/_variables.scss";
+@import "./partials/_mixins.scss";
+
+/********************* CSS RESETS AND DEFAULTS *********************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-regular, sans-serif;
+  position: relative;
+  // background: radial-gradient(circle, $primary-light 0%, $primary-color 50%, $primary-dark 100%);
+  background: linear-gradient(to right, $primary-black, $primary-dark);
+}
+
+/********************* APP *********************/
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  &__corner-triangle {
+    width: 0px;
+    height:0px;
+    border-bottom: 250px solid $primary-color;
+    border-left: 250px solid transparent;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+}

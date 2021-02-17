@@ -1,0 +1,27 @@
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+
+.bug-tracker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    &__list {
+        width: 70vw;
+        height: 70vh;
+        overflow: scroll;
+        border-top: 2px solid $primary-dark;
+        border-bottom: 2px solid $primary-dark;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__no-otd {
+        color: $primary-white;
+        text-align: center;
+        margin-top: 50px;
+    }
+}

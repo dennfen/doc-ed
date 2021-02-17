@@ -1,0 +1,117 @@
+@import './_variables.scss';
+@import './_typography.scss';
+
+@mixin card {
+    color: $primary-white;
+    border: 1px solid $primary-light;
+    width: 350px;
+    height: 500px;
+    cursor: pointer;
+    animation-duration: 3s;
+    transform-origin: center center 0px;
+    transition: all .5s ease-out;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    background-color: $primary-dark;
+}
+
+@mixin shadow {
+    box-shadow: 0 10px 40px 2px rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+@mixin form-field-code {
+    color: $primary-black;
+    background-color: $primary-code;
+    resize: none;
+    outline: none;
+    padding: 30px;
+    font-size: 14px;
+    overflow-x: scroll;
+    white-space: pre-wrap;
+    margin-top: 10px;
+    border-radius: 20px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin form-field-subtitle {
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+@mixin form-field-label {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+@mixin form-field-input {
+    font-size: 14px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: 1px solid $primary-black;
+    outline: none;
+    font-weight: normal;
+    padding: 8px 20px;
+
+    &:focus {
+        border: 3px solid $primary-color;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin form-field-text {
+    font-size: 14px;
+    font-family: inherit;
+    border-radius: 20px;
+    white-space: pre-wrap;
+    padding: 20px;
+    resize: none;
+    outline: none;
+    margin-top: 10px;
+
+    &:focus {
+        border: 3px solid $primary-color;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin form-field-select {
+    font-size: 14px;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    background-color: rgba($primary-white, 0.8);
+    border: 1px solid $primary-dark;
+
+    &:focus {
+        border: 3px solid $primary-color;
+        background-color: $primary-white;
+    }
+}
+
+@mixin form-field-button {
+    font-size: 18px;
+    border-radius: 20px;
+    outline: none;
+    border: 0;
+    background-color: $primary-dark;
+    color: $primary-white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}

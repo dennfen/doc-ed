@@ -1,0 +1,35 @@
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+
+.add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border: 0;
+    font-size: 60px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    outline: none;
+    background-color: $primary-white;
+    cursor: pointer;
+    color: #a7a7a7;
+    line-height: 144px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+    border: 2px solid $primary-color;
+    transition: 0.5s;
+    z-index: 1;
+
+    &:hover {
+        text-decoration: none;
+        color: $primary-black;
+        background: #f5f5f5;
+        border: 2px solid $primary-light;
+    }
+}

@@ -1,0 +1,112 @@
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+
+
+.filter-sort {
+    position: absolute;
+    color: $primary-white;
+    left: 0;
+    margin-left: 60px;
+    width: 180px;
+    height: 600px;
+
+    &__container {
+        margin-bottom: 100px;
+    }
+
+    &__heading {
+        margin-bottom: 20px;
+    }
+
+    &__switch {
+        display: flex;
+        height: 20px;
+    }
+
+    &__switch-label {
+        display: block;
+        position: relative;
+        margin-right: 20px;
+        margin-left: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        height: 24px;
+        width: 24px;
+    
+        & .filter-sort__input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer; 
+        }
+    
+        & .filter-sort__box {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 24px;
+            width: 24px;
+            background-color: transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease-out;
+            border: 2px solid $primary-white;
+        }
+    
+        & .filter-sort__input:checked ~ .filter-sort__box {
+            background-color: $primary-white;
+            border-radius: 5px;
+            transform: rotate(0deg) scale(1);
+            opacity:1;
+            border: 2px solid $primary-white;
+        }
+    
+        & .filter-sort__box::after {
+            position: absolute;
+            content: "";
+            left: 12px;
+            top: 12px;
+            height: 0px;
+            width: 0px;
+            border-radius: 5px;
+            border: solid $primary-color;
+            border-width: 0 3px 3px 0;
+            transform: rotate(0deg) scale(0);
+            opacity:1;
+            transition: all 0.3s ease-out;
+        }
+    
+        & .filter-sort__input:checked ~ .filter-sort__box::after {
+            transform: rotate(45deg) scale(1);
+            opacity:1;
+            left: 8px;
+            top: 3px;
+            width: 6px;
+            height: 12px;
+            border: solid $primary-color;
+            border-width: 0 2px 2px 0;
+            background-color: transparent;
+            border-radius: 0;
+        }
+    }
+
+    &__label {
+        font-size: 18px;
+    }
+
+    &__select {
+        width: 100%;
+        height: 50px;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 16px;
+        outline: none;
+        background-color: rgba($primary-white, 0.8);
+        border: 1px solid $primary-dark;
+        margin-bottom: 20px;
+        margin-top: 10px;
+
+        &:focus {
+            border: 3px solid $primary-color;
+            background-color: $primary-white;
+        }
+    }
+}

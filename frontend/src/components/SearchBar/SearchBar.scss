@@ -1,0 +1,26 @@
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+
+.search-bar {
+    font-size: 18px;
+    margin-bottom: 40px;
+    align-self: flex-end;
+    height: 50px;
+    width: 300px;
+    padding: 16px;
+    border-radius: 20px;
+    outline: none;
+    background-color: rgba($primary-white, 0.8);
+    border: 1px solid $primary-dark;
+    background-image: url(../../assets/icons/search-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 20px;
+    text-indent: 40px;
+    transition: 0.5s;
+
+    &:focus {
+        border: 3px solid $primary-color;
+        background-color: $primary-white;
+    }
+}

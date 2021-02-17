@@ -1,0 +1,122 @@
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+
+.bug-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 auto 20px auto;
+    padding: 30px 100px;
+    width: 80%;
+    border-radius: 20px;
+    background-color: $primary-white;
+    box-shadow: 0 10px 40px 2px rgba(0,0,0,0.4);
+    border: 1px solid $primary-light;
+    overflow: hidden;
+
+    &:hover {
+        background: #f5f5f5;
+    }
+
+    &__content-container {
+        width: 75%;
+        // margin-left: 100px;
+    }
+    
+    &__title-container {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    &__id {
+        width: 40px;
+    }
+    
+    &__title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-left: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__dates {
+        display: flex;
+    }
+
+    &__label {
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+    &__dates-container{
+        display: flex;
+    }
+    
+    &__tech {
+        font-size: 18px;
+        width: 100px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    &__create {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    &__close {
+        font-size: 18px;
+        margin-left: auto;
+    }
+
+    &__short-desc {
+        padding-top: 20px;
+        border-top: 1px solid $primary-black;
+    }
+
+    &__button-container {
+        width: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__status {
+        margin-bottom: 20px;
+    }
+
+    &__button {
+        width: 80px;
+        height: 30px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        outline: none;
+        border: 0;
+        background-color: $primary-dark;
+        color: $primary-white;
+        font-weight: bold;
+    }
+
+    &__indicator {
+        width: 0px;
+        height:0px;
+        top: 0;
+        left: 0;
+        position: absolute;
+        
+        &--outstanding {
+            border-right: 20px solid transparent;
+            border-top: 20px solid red;
+        }
+
+        &--closed {
+            border-right: 20px solid transparent;
+            border-top: 20px solid $primary-color;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+
+.dashboard {
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__card1 {
+        @include card;
+        @include shadow;
+        padding: 50px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__days-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    &__delta-num {
+        font-size: 120px;
+    }
+
+    &__delta-text {
+        font-weight: bold;
+        align-self: flex-end;
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
+
+    &__card2 {
+        @include card;
+        @include shadow;
+        padding: 50px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__outstanding {
+        font-size: 120px;
+        position: absolute;
+        margin-top: 70px;
+    }
+
+    &__card3 {
+        @include card;
+        @include shadow;
+        padding: 50px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

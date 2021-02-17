@@ -1,0 +1,14 @@
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+
+.legend {
+    display: flex;
+
+    &__color {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+}

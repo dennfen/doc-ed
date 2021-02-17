@@ -1,0 +1,90 @@
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+
+.edit-form {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 32px;
+    }
+
+    &__subtitle {
+        @include form-field-subtitle;
+    }
+
+    &__code-container {
+        display: flex;
+        flex-direction: column;
+        width: calc(50% - 60px / 2);
+        padding-right: 30px;
+        border-right: 1px solid $primary-black;
+
+        &--extended {
+            width: calc(33.33% - (60px * 2) / 3);
+        }
+    }
+
+    &__code-editor {
+        @include form-field-code;
+        height: 600px;
+    }
+
+    &__main-container {
+        width: calc(50% - 60px / 2);
+        margin-left: 30px;
+
+        &--extended {
+            width: calc(33.33% - (60px * 2) / 3);
+        }
+    }
+
+    &__field-container {
+        margin-bottom: 20px;
+    }
+
+    &__field-label {
+        @include form-field-label;
+    }
+
+    &__field-input {
+        @include form-field-input;
+        width: 100%;
+        height: 40px;
+
+        &--grey {
+            background-color: lightgrey;
+        }
+    }
+
+    &__field-text {
+        @include form-field-text;
+        width: 100%;
+        height: 150px;
+
+        &--grey {
+            background-color: lightgrey;
+        }
+    }
+
+    &__field-select {
+        @include form-field-select;
+        width: 100%;
+        height: 50px;
+    }
+
+    &__resolution-container {
+        width: calc(33.33% - (60px * 2) / 3);
+        margin-left: 30px;
+        border-left: 1px solid $primary-black;
+        padding-left: 30px;
+    }
+
+    &__submit-button {
+        @include form-field-button;
+        width: 100px;
+        height: 40px;
+    }
+}

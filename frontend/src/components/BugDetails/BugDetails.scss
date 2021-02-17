@@ -1,0 +1,85 @@
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+
+.bug-details {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 32px;
+    }
+
+    &__code-container {
+        display: flex;
+        flex-direction: column;
+        width: calc(33.33% - (60px *2) / 3);
+        padding-right: 30px;
+        border-right: 1px solid $primary-black;
+    }
+
+    &__code-editor {
+        @include form-field-code;
+        height: 600px;
+    }
+
+    &__main-container {
+        width: calc(33.33% - (60px *2) / 3);
+        margin-left: 30px;
+    }
+
+    &__field-container {
+        margin-bottom: 20px;
+    }
+
+    &__field-label {
+        @include form-field-label;
+    }
+
+    &__field-input {
+        @include form-field-input;
+        width: 100%;
+        height: 40px;
+        overflow: scroll;
+        background-color: lightgrey;
+
+        &--extended {
+            height: 100px;
+        }
+    }
+
+    &__field-text {
+        @include form-field-text;
+        width: 100%;
+        height: 150px;
+        border: 1px solid $primary-black;
+        overflow: scroll;
+        background-color: lightgrey;
+    }
+
+    &__field-status {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+
+        &--outstanding {
+            color: red;
+        }
+
+        &--closed {
+            color: $primary-color;
+        }
+    }
+
+    &__resolution-container {
+        width: calc(33.33% - (60px *2) / 3);
+        margin-left: 30px;
+        border-left: 1px solid $primary-black;
+        padding-left: 30px;
+    }
+
+    &__field-link {
+        word-wrap: break-word;
+    }
+}
